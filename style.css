@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to bottom, #bde8ff, #e6f7ff); /* soft blue sky */
+  overflow-x: hidden;
+  color: #333;
+  position: relative;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #5faafc;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Game Cards */
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 3rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.game-card {
+  background: #ffffffec;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 240px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+}
+
+.game-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.game-card h2 {
+  font-size: 1.5rem;
+  color: #2f7dd3;
+  margin-bottom: 1rem;
+}
+
+.play-btn {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background: #a9e1ff;
+  color: #034672;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.play-btn:hover {
+  background: #7bd0f9;
+}
+
+.fancy-card {
+  background: #a5d8ff;
+  border-radius: 18px;
+  padding: 1.5rem 1rem;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.fancy-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.fancy-card .game-preview {
+  background-color: #e0f4ff;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.fancy-card .game-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.fancy-card h2 {
+  font-size: 1.5rem;
+  color: #324b82;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.fancy-card .play-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #0077cc;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.fancy-card .play-btn:hover {
+  background-color: #d4f0ff;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background: #eafaff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #777;
+  z-index: 2;
+  position: relative;
+}
+
+/* Clouds container */
+.clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Base Cloud Style */
+.cloud {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.9;
+  filter: blur(2px);
+}
+
+/* Unique Clouds */
+.cloud1 {
+  top: 80px;
+  left: -250px;
+  width: 80px;
+  height: 60px;
+  animation: cloudMove 80s linear infinite;
+}
+.cloud1::before, .cloud1::after {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+.cloud1::before {
+  width: 100px;
+  height: 80px;
+  top: -20px;
+  left: 30px;
+}
+.cloud1::after {
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  left: 80px;
+}
+
+.cloud2 {
+  top: 220px;
+  left: -300px;
+  width: 90px;
+  height: 70px;
+  animation: cloudMove 100s linear infinite;
+}
+.cloud2::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  top: -25px;
+  left: 40px;
+}
+.cloud2::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  top: 15px;
+  left: 100px;
+}
+
+.cloud3 {
+  top: 350px;
+  left: -280px;
+  width: 100px;
+  height: 60px;
+  animation: cloudMove 90s linear infinite;
+}
+.cloud3::before {
+  content: '';
+  position: absolute;
+  width: 110px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  top: -15px;
+  left: 35px;
+}
+.cloud3::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  top: 20px;
+  left: 90px;
+}
+
+.cloud4 {
+  top: 120px;
+  left: -400px;
+  width: 110px;
+  height: 80px;
+  animation: cloudMove 130s linear infinite;
+}
+.cloud4::before {
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  top: -30px;
+  left: 45px;
+}
+.cloud4::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  top: 20px;
+  left: 120px;
+}
+
+.cloud5 {
+  top: 450px;
+  left: -200px;
+  width: 95px;
+  height: 65px;
+  animation: cloudMove 70s linear infinite;
+}
+.cloud5::before {
+  content: '';
+  position: absolute;
+  width: 115px;
+  height: 85px;
+  background: white;
+  border-radius: 50%;
+  top: -20px;
+  left: 40px;
+}
+.cloud5::after {
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 55px;
+  background: white;
+  border-radius: 50%;
+  top: 15px;
+  left: 90px;
+}
+
+/* Cloud Animation */
+@keyframes cloudMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(250vw);
+  }
+}

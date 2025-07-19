@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico" type="image/icon type">
+    
+    <style>
+    body{
+        margin: 0.1;
+        padding: 0;
+    }
+    #hide{
+        display: none;
+    }
+    </style>
+    <title>Space Shooter</title>
+</head>
+<body>
+
+    <div id="hide">
+        <img src="assets/Background.png" id="bg">
+        <img src="assets/player.png" id="player">
+        <img src="assets/enemyShip.png" id="enemy">
+        <img src="assets/playerBullet.png" id="playerBullet">
+        <img src="assets/enemyBullet.png" id="enemyBullet">
+        <audio src="assets/enemyDie.mp3" id="enemyDie"></audio>
+        <audio src="assets/bulletSound.mp3" id="bulletSound"></audio>
+    </div>
+
+
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+
+    <script src="player.js"></script>
+    <script src="bullet.js"></script>
+    <script src="enemy.js"></script>
+    <script src="levels.js"></script>
+    <script src="script.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

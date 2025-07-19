@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #87ceeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+#board {
+  background-image: url("assets/background.png");
+  background-size: cover;
+  border: 2px solid #000;
+}

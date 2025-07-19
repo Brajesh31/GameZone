@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    color:#333;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+
+.heading h1{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(53, 189, 243);
+    color:rgba(255, 255, 255, 0.9);
+}
+
+#board{
+    background: url('bg.jpg');
+    width:500px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#board img{
+    position: absolute;
+    width:20px;
+    height: 25px;
+    left: -50px;
+    bottom: 0px;
+    transition: all 400ms ease-in-out;
+}
+
+#board img:first-child{
+    bottom:25px;
+}
+
+.display {
+    margin:10px auto;
+    display: block;
+    text-align: center;
+}
+
+#turn{
+    transition: all 400ms ease-in-out;
+}
+
+
+.controls{
+    margin:10px auto;
+    width:500px;
+    display: flex;
+    justify-content: space-between;
+}
+.controls img{
+    width:60px;
+    height: 60px;
+    animation-fill-mode: forwards;
+}
+
+.controls h2 {
+    display: inline;
+    margin:20px;
+}
+
+#diceValue{
+    transition: all 400ms ease-in-out;
+}
+
+@keyframes diceRoll {
+    0% {
+        transform: rotate(0deg) scale(1,1);
+       
+    }
+    50%{
+        transform: rotate(180deg) scale(1.2,1.2);
+        
+    }
+    100%{
+        transform: rotate(360deg) scale(1,1);
+        
+    }
+    
+}
+
+@keyframes none {
+
+}
+
+.player img{
+    width: 50px;
+}
+.player{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 100px;
+}
+#main h2 {
+    margin: 10px;
+}

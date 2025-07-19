@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    cursor: url(aim.png), text;
+    overflow: hidden;
+}
+body:before{
+    content: '';
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url(bg.png) repeat-x bottom left;
+}
+@keyframes duckfly{
+    0%{   
+        left: 120%;
+        top: 10%;
+    }
+    25%{
+        left: 80%;
+        top: 50%;
+    }
+    50%{
+        left: 50%;
+        top: 30%;
+    }
+    75%{
+        left: 20%;
+        top: 30%;
+    }
+    100%{
+        left: -100%;
+        top: 10%;
+    }
+}
+input + label{
+    position: absolute;
+    left: -100px;
+    z-index: 1;
+    width: 36px;
+    height: 34px;
+    display: block;
+    z-index: 5;
+    transform: translate(-50%,-50%);
+    background: url(duck_black.png) no-repeat left center;
+    background-position: -138px 0;
+}
+input:checked + label{
+    opacity: 0;
+    transition: 0.5s;
+    transform: rotate(120deg);
+    transform-origin: 60%;
+    z-index: -5;
+}
+.duck:nth-last-of-type(1){
+    animation: duckfly 8s linear 5s infinite;
+    cursor: url(aim.png), text;
+}
+
+.duck:nth-last-of-type(2){
+    animation: duckfly 20s linear 10s infinite;
+    cursor: url(aim.png), text;
+}
+
+.duck:nth-last-of-type(3){
+    animation: duckfly 30s linear 15s infinite;
+    cursor: url(aim.png), text;
+}
+
+.duck:nth-last-of-type(4){
+    animation: duckfly 15s linear 20s infinite;
+    cursor: url(aim.png), text;
+}
+
+.duck:nth-last-of-type(5){
+    animation: duckfly 25s linear 25s infinite;
+    cursor: url(aim.png), text;
+}
+
+.duck:nth-last-of-type(6){
+    animation: duckfly 8s linear 30s infinite;
+    cursor: url(aim.png), text;
+}
+
+.duck:nth-last-of-type(7){
+    animation: duckfly 20s linear 35s infinite;
+    cursor: url(aim.png), text;
+}
+
+.duck:nth-last-of-type(8){
+    animation: duckfly 30s linear 40s infinite;
+    cursor: url(aim.png), text;
+}
+
+.duck:nth-last-of-type(9){
+    animation: duckfly 15s linear 45s infinite;
+    cursor: url(aim.png), text;
+}
+
+.duck:nth-last-of-type(10){
+    animation: duckfly 25s linear 50s infinite;
+    cursor: url(aim.png), text;
+}
+
+.score{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: #dadada;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    font-size: 30px;
+}
+.score:after{
+    content: counter(score);
+    display: inline-block;
+}
+.score:before{
+    content: 'Score : ';
+    display: inline-block;
+    margin-right: 10px;
+}
+input:checked{
+    counter-increment: score;
+}
